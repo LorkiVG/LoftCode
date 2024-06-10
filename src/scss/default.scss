@@ -1,0 +1,164 @@
+body 
+{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	transition: 1s;
+}
+
+p 
+{
+	&::selection 
+	{
+		background-color: rgba(97, 97, 97, 0.2);
+	}
+}
+textarea,input,button 
+{
+	border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    resize: none; 
+	&::selection
+    {
+		background-color: rgba(97, 97, 97, 0.2);
+	}
+}
+b 
+{
+	&::selection
+    {
+		background-color: rgba(97, 97, 97, 0.2);
+	}
+}
+h1
+{
+	&::selection
+    {
+		background-color: rgba(97, 97, 97, 0.2);
+	}
+}
+h2
+{
+	&::selection
+    {
+		background-color: rgba(97, 97, 97, 0.2);
+	}
+}
+h3
+{
+	&::selection
+    {
+		background-color: rgba(97, 97, 97, 0.2);
+	}
+}
+h4
+{
+	&::selection
+    {
+		background-color: rgba(97, 97, 97, 0.2);
+	}
+}
+h5
+{
+	&::selection
+    {
+		background-color: rgba(97, 97, 97, 0.2);
+	}
+}
+h6 
+{
+	&::selection 
+    {
+		background-color: rgba(97, 97, 97, 0.2);
+	}
+}
+a 
+{
+	&::selection 
+    {
+		background-color: rgba(97, 97, 97, 0.2);
+	}
+}
+img 
+{
+	&::selection 
+    {
+		background-color: rgba(97, 97, 97, 0.2);
+	}
+}
+button 
+{
+	&::selection 
+    {
+		background-color: rgba(97, 97, 97, 0.2);
+	}
+}
+label 
+{
+	&::selection 
+    {
+		background-color: rgba(97, 97, 97, 0.2);
+	}
+}
+input 
+{
+	&::selection 
+    {
+		background-color: rgba(97, 97, 97, 0.2);
+	}
+}
+legend 
+{
+	&::selection 
+    {
+		background-color: rgba(97, 97, 97, 0.2);
+	}
+}
+th 
+{
+	&::selection 
+    {
+		background-color: rgba(97, 97, 97, 0.2);
+	}
+}
+td 
+{
+	&::selection 
+    {
+		background-color: rgba(97, 97, 97, 0.2);
+	}
+}
+caption 
+{
+	&::selection 
+    {
+		background-color: rgba(97, 97, 97, 0.2);
+	}
+}
+div 
+{
+	&::selection 
+    {
+		background-color: rgba(97, 97, 97, 0.2);
+	}
+}
+p, h1, h2, h3, h4, h5, h6, input, a, textarea, input::placeholder, textarea::placeholder, button
+{
+	font-family: Gilroy, sans-serif;
+}
+.slider 
+{
+	display: flex;
+}
+.carousel__track
+{
+	margin: 0 !important;
+}
