@@ -1,49 +1,13 @@
 <script setup lang="ts">
-    import { ref, Ref } from 'vue';
+    import About from '../components/About.vue';
+    import BGBlock from '../components/BGBlock.vue';
+    import Projects from '../components/Projects.vue';
 
-    import { Carousel, Navigation, Slide } from 'vue3-carousel'
-    import 'vue3-carousel/dist/carousel.css'
-
-    const bgSlider : any = ref();
-    let bgMaxIndex : number = 3;
-    setInterval(() => 
-    {
-        bgSlider.value.next();
-    }, 3000);
-
-    const answersSlider : any = ref();
-    const answers : Ref<Answer[]> = ref(
-    [
-        {
-            stars: 5,
-            text: 'The quality of work is what sets LoftCode apart from other companies. They are experts in their field and always give only helpful advice. I am incredibly glad I went to them.',
-            clientName: 'Mark Twin',
-            clientCompany: 'Product owner SberPay',
-        },
-        {
-            stars: 4,
-            text: 'The guys suggested improvements for my app that I really appreciated - instead of doing exactly what I asked for, it resulted in a better product.',
-            clientName: 'Ilya Kuvshinov',
-            clientCompany: 'CRAPPO founder',
-        },
-        {
-            stars: 5,
-            text: 'I would like to leave my feedback on the work of this company. I ordered from them a mobile application from scratch, the manager promptly contacted me, we discussed the whole project and my wishes and surprisingly they made it even faster than the deadline, I am satisfied.',
-            clientName: 'Oksana Nikitievna',
-            clientCompany: 'Our Client',
-        },
-        {
-            stars: 5,
-            text: 'I contacted the company with help over the creation of a personal blog about travelling around the world, the guys helped, made the design, coordinated everything with me and even ran quality advertising that we agreed on, I am satisfied.',
-            clientName: 'Pavel Dmitriev',
-            clientCompany: 'Our Client',
-        }
-    ]);
 </script>
 <template>
-    
-    
-    
+    <BGBlock/>
+    <About/>
+    <Projects/>
 </template>
 
 <style lang="scss" scoped src="./scss/Main.scss"></style>

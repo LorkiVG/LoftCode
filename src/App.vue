@@ -5,6 +5,7 @@ import { RouteLocationNormalizedLoaded } from 'vue-router';
 import { PerfectScrollbar } from 'vue3-perfect-scrollbar';
 import { useRoute } from 'vue-router';
 import { container } from "jenesius-vue-modal";
+import Header from './components/Header.vue';
 
 const isBurgerActive : Ref<boolean> = ref(false);
 
@@ -48,6 +49,7 @@ onUnmounted(() =>
 </script>
 
 <template>
+    <Header/>
     <perfect-scrollbar v-if="windowWidth > 1050" ref="scroll">
         <router-view v-slot="{ Component }">
             <transition name="pageOpacity" mode="out-in">

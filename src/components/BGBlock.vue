@@ -16,12 +16,14 @@
         <div class="bgblock__slider">
             <Carousel :wrapAround="true" ref="bgSlider">
                 <Slide v-for="slide in bgMaxIndex" :key="slide">
-                    <img :src="`/src/assets/img/bg/${slide}.png`" alt="" class="bg__img">
+                    <img :src="`/src/assets/img/components/BGBlock/${slide}.png`" alt="" class="bgblock__slider__img">
                 </Slide>
             </Carousel>
         </div>
         <div class="bgblock__content">
-            <p class="bgblock__content__text">Design. Development. Support</p>
+            <h1 class="bgblock__content__title">Design. Development. Support</h1>
         </div>
     </div>
 </template>
+
+<style lang="scss" scoped src="./scss/BGBlock.scss"></style>
