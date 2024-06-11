@@ -9,15 +9,12 @@
 		width: 80%;
 		display: flex;
 		justify-content: space-between;
+		&__policy
+		{
+			cursor: pointer;
+		}
 	}
-	&__policy
-	{
-		cursor: pointer;
-	}
-	&__copyright,&__policy 
-	{
-		color: rgba(230, 230, 230, 0.6);
-	}
+	
 }
 
 @media(max-width: 720px)

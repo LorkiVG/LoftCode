@@ -42,27 +42,8 @@
 </script>
 <template>
     
-    <div class="main">
-        <div class="blockmain">
-            <div class="bg">
-                <Carousel :wrapAround="true" ref="bgSlider">
-                    <Slide v-for="slide in bgMaxIndex" :key="slide">
-                        <img :src="`/src/assets/img/bg/${slide}.png`" alt="" class="bg__img">
-                    </Slide>
-                </Carousel>
-            </div>
-            <div class="main__content">
-                <p class="main__text">Design. Development. Support</p>
-            </div>
-        </div>
-    </div>
-        
-
-    <div class="content">
-        
-
-        
-    </div>
+    
+    
 </template>
 
 <style lang="scss" scoped src="./scss/Main.scss"></style>

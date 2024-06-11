@@ -1,0 +1,158 @@
+.projects 
+{
+	width: 100%;
+	height: inherit;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	&__title 
+    {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 28px;
+	}
+	&__top
+    {
+		width: 80%;
+		height: 800px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__info 
+    {
+		width: 80%;
+	}
+}
+.projects__project 
+{
+	&__left,&__right 
+    {
+		width: 45%;
+		min-width: 530px;
+		min-height: 620px;
+		max-height: 800px;
+	}
+	&__left 
+    {
+		background: conic-gradient(from 166.19deg at 50% 63.75%, #EFCC26 0deg, #36813E 166.87deg, #03030F 360deg);
+	}
+	&__right 
+    {
+		background: linear-gradient(341.06deg, #F53838 -12.58%, #03030F 179.4%);
+	}
+	&__down 
+    {
+		width: 80%;
+		background: rgb(4,85,224);
+		background: -moz-linear-gradient(110deg, rgba(4,85,224,1) 0%, rgba(0,42,112,1) 100%);
+		background: -webkit-linear-gradient(110deg, rgba(4,85,224,1) 0%, rgba(0,42,112,1) 100%);
+		background: linear-gradient(110deg, rgba(4,85,224,1) 0%, rgba(0,42,112,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0455e0",endColorstr="#002a70",GradientType=1);
+		background-size: cover;
+		height: 500px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		h1 
+        {
+			max-width: 510px;
+		}
+		&__img 
+        {
+			width: 600px;
+		}
+		&__content 
+        {
+			width: 42%;
+			height: 95%;
+		}
+	}
+	&__content__div 
+    {
+		justify-content: space-between;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+	}
+	&__title 
+    {
+		font-family: Gilroy, sans-serif;
+		max-width: 350px;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 38px;
+		line-height: 46px;
+		color: #FFFFFF;
+	}
+	&__titles 
+    {
+		width: 90%;
+	}
+	&__category 
+    {
+		font-style: normal;
+		margin-top: -15px;
+		font-weight: 500;
+		font-size: 21px;
+		line-height: 31px;
+		color: rgba(255, 255, 255, 0.6);
+	}
+}
+.project__img 
+{
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+@media(max-width: 740px)
+{
+	.projects__project__img
+    {
+		width: 330px;
+	}
+	.projects__duo
+    {
+		min-height: 1140px;
+	}
+	.projects__project__title
+    {
+		font-size: 30px;
+	}
+	.projects__project__left,.projects__project__right,.projects__project__down
+    {
+		height: 550px;
+		min-height: 500px;
+	}
+	.projects__duo,.projects__project__down
+    {
+		width: 95%;
+	}
+	.projects__project__content__div
+    {
+		height: 100%;
+	}
+	.projects__project__title
+    {
+		font-size: 25px;
+	}
+	.projects__project__category 
+    {
+		margin-top: 11px;
+		font-size: 20px;
+	}
+	.projects__project__down__content 
+    {
+		height: 35%;
+	}
+	.projects__project__down__img 
+    {
+		transform: scale(0.6);
+	}
+}
