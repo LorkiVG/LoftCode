@@ -2,7 +2,7 @@
     <div class="contacts">
         <p class="contacts__title">Contacts</p>
         <form method="POST" id="form" class="contacts__form">
-            <h1 class="contacts__form__title">Send request</h1>
+            <h1 class="contacts__form__title">Send your project idea</h1>
             <div class="contacts__form__content">
                 <div class="contacts__form__content__block">
                     <input type="text" name="name" id="name" class="contacts__form__content__block__input" autocomplete="off" placeholder="Your name">

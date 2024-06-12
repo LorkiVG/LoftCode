@@ -61,14 +61,19 @@
 				display: none;
 				&:focus + .header__content__switch__round 
 				{
-					box-shadow: 0 0 1px #505050;
+					box-shadow: 0 0 1px #6a6a6a;
 				}
 				&:checked + .header__content__switch__round
 				{
-					background-color: #505050;
+					background-color: #6a6a6a;
+				}
+				&:focus + .header__content__switch__round:before 
+				{
+					box-shadow: 0 0 1px #909090;
 				}
 				&:checked + .header__content__switch__round:before 
 				{
+					background-color: #909090;
 					-webkit-transform: translateX(22px);
 					-ms-transform: translateX(22px);
 					transform: translateX(22px);

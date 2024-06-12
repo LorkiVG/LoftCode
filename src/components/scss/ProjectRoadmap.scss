@@ -10,11 +10,11 @@
         font-size: 46px;
         color: #fff;
         font-weight: 600;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
     &__block
     {
-        width: 98%;
+        width: 99%;
         &__title
         {
             font-size: 44px;
@@ -24,7 +24,7 @@
         &__info
         {
             margin-top: 5px;
-            margin-left: 14px;
+            margin-left: 16px;
             &__title
             {
                 font-size: 40px;
@@ -38,6 +38,7 @@
                 &__title
                 {
                     font-size: 34px;
+                    font-weight: 500;
                     color: #fff;
                 }
                 &__subcontent
