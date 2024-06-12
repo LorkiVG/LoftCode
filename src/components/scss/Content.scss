@@ -1,0 +1,68 @@
+.content
+{
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title
+    {
+        width: 100%;
+        font-size: 48px;
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 35px;
+    }
+    &__block
+    {
+        width: 98%;
+        &__title
+        {
+            font-size: 46px;
+            color: #fff;
+            font-weight: 600;
+        }
+        &__info
+        {
+            margin-top: 5px;
+            margin-left: 2%;
+            &__title
+            {
+                font-size: 42px;
+                color: #fff;
+            }
+            &__subblock
+            {
+                margin-top: .3%;
+                margin-bottom: 7%;
+                
+                &__title
+                {
+                    font-size: 34px;
+                    color: #fff;
+                }
+                &__subcontent
+                {
+                    margin-top: 3%;
+                    margin-left: 3%;
+                    display: grid;
+                    grid-template-columns: 35% 35%;
+                    gap: 50px;
+                    &__subblock
+                    {
+                        &__title
+                        {
+                            font-size: 32px;
+                            color: #fff;
+                        }
+                        &__text
+                        {
+                            font-size: 26px;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

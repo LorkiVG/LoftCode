@@ -61,11 +61,11 @@
 				display: none;
 				&:focus + .header__content__switch__round 
 				{
-					box-shadow: 0 0 1px #6EEF91;
+					box-shadow: 0 0 1px #505050;
 				}
 				&:checked + .header__content__switch__round
 				{
-					background-color: #6EEF91;
+					background-color: #505050;
 				}
 				&:checked + .header__content__switch__round:before 
 				{

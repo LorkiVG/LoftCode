@@ -1,5 +1,6 @@
 <template>
     <div class="content">
+        <h1 class="content__title">Project Roadmap</h1>
         <div class="content__block">
             <p class="content__block__title">01</p>
             <div class="content__block__info">
@@ -75,3 +76,5 @@
         </div>
     </div>
 </template>
+
+<style lang="scss" scoped src="./scss/Content.scss"></style>
