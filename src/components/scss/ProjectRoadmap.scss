@@ -7,33 +7,33 @@
     &__title
     {
         width: 100%;
-        font-size: 48px;
+        font-size: 46px;
         color: #fff;
         font-weight: 600;
-        margin-bottom: 35px;
+        margin-bottom: 15px;
     }
     &__block
     {
         width: 98%;
         &__title
         {
-            font-size: 46px;
+            font-size: 44px;
             color: #fff;
             font-weight: 600;
         }
         &__info
         {
             margin-top: 5px;
-            margin-left: 2%;
+            margin-left: 14px;
             &__title
             {
-                font-size: 42px;
+                font-size: 40px;
                 color: #fff;
             }
             &__subblock
             {
-                margin-top: .3%;
-                margin-bottom: 7%;
+                margin-top: 5px;
+                margin-bottom: 100px;
                 
                 &__title
                 {
@@ -42,8 +42,8 @@
                 }
                 &__subcontent
                 {
-                    margin-top: 3%;
-                    margin-left: 3%;
+                    margin-top: 45px;
+                    margin-left: 30px;
                     display: grid;
                     grid-template-columns: 35% 35%;
                     gap: 50px;
@@ -63,6 +63,5 @@
                 }
             }
         }
-
     }
 }

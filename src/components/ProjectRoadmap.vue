@@ -77,4 +77,4 @@
     </div>
 </template>
 
-<style lang="scss" scoped src="./scss/Content.scss"></style>
+<style lang="scss" scoped src="./scss/ProjectRoadmap.scss"></style>

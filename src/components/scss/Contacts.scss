@@ -1,0 +1,27 @@
+.contacts
+{
+    margin-top: 60px;
+    width: 88%;
+    &__title
+    {
+        width: 100%;
+        font-size: 48px;
+        font-weight: 600;
+        color: #fff;
+    }
+    &__form
+    {
+        width: 98%;
+        
+        &__title
+        {
+            font-size: 36px;
+            font-weight: 500;
+            color: #fff;
+        }
+        &__content
+        {
+            
+        }
+    }
+}

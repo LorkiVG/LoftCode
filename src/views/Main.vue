@@ -1,14 +1,16 @@
 <script setup lang="ts">
-    import About from '../components/About.vue';
     import BGBlock from '../components/BGBlock.vue';
-    import Content from '../components/Content.vue';
+    import About from '../components/About.vue';
+    import ProjectRoadmap from '../components/ProjectRoadmap.vue';
     import Projects from '../components/Projects.vue';
+    import Contacts from '../components/Contacts.vue';
 </script>
 <template>
     <BGBlock/>
     <About/>
-    <Content/>
+    <ProjectRoadmap/>
     <Projects/>
+    <Contacts/>
 </template>
 
 <style lang="scss" scoped src="./scss/Main.scss"></style>

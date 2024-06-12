@@ -18,3 +18,5 @@
         </form>  
     </div>
 </template>
+
+<style lang="scss" scoped src="./scss/Contacts.scss"></style>
