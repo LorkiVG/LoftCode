@@ -6,6 +6,7 @@ import { PerfectScrollbar } from 'vue3-perfect-scrollbar';
 import { useRoute } from 'vue-router';
 import { container } from "jenesius-vue-modal";
 import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
 
 const isBurgerActive : Ref<boolean> = ref(false);
 
@@ -63,4 +64,5 @@ onUnmounted(() =>
         </transition>
     </router-view>
     <container />
+    <Footer/>
 </template>

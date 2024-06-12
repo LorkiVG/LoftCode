@@ -63,6 +63,7 @@
 			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0455e0",endColorstr="#002a70",GradientType=1);
 			&__info
 			{
+				top: 30px;
 				&__title
 				{
 					font-size: 38px;
@@ -76,9 +77,10 @@
 			&__img
 			{
 				position: absolute;
-				bottom: 0;
+				bottom: 15px;
 				right: 60px;
 			}
+			margin-bottom: 20px;
 		}
 		&__project
 		{

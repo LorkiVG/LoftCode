@@ -4,11 +4,16 @@
 	justify-content: center;
 	align-items: center;
 	height: 90px;
+	width: 86%;
 	&__content
 	{
-		width: 80%;
+		width: 96%;
 		display: flex;
 		justify-content: space-between;
+		&__policy, &__copyright
+		{
+			color: #bebebe;
+		}
 		&__policy
 		{
 			cursor: pointer;

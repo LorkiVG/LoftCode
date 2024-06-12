@@ -7,4 +7,4 @@
     </footer>
 </template>
 
-<style lang="scss" scoped src="./scss/Main.scss"></style>
+<style lang="scss" scoped src="./scss/Footer.scss"></style>
