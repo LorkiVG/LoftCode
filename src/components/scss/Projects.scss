@@ -34,15 +34,11 @@
 			}
 			&.top &__project
 			{
-				width: 32%;
-				height: 740px;
+				width: 49%;
+				height: 500px;
 				&.left 
 				{
 					background: conic-gradient(from 166.19deg at 50% 63.75%, #EFCC26 0deg, #36813E 166.87deg, #03030F 360deg);
-				}
-				&.center 
-				{
-					background: linear-gradient(341.06deg, #d238f5 -12.58%, #4a4ae5 179.4%);
 				}
 				&.right 
 				{
@@ -50,7 +46,7 @@
 				}
 				&__img
 				{
-					width: 80%;
+					right: 60px;
 				}
 			}
 			&.down &__project

@@ -68,10 +68,209 @@
     }
 }
 
+
+@media(max-width: 1750px)
+{
+    .content
+    {
+        &__block
+        {
+            &__info
+            {
+                &__subblock
+                {
+                    &__subcontent
+                    {
+                        margin-left: 45px;
+                        grid-template-columns: 40% 40%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1550px)
+{
+    .content
+    {
+        &__block
+        {
+            &__info
+            {
+                &__subblock
+                {
+                    &__subcontent
+                    {
+                        margin-left: 30px;
+                        grid-template-columns: 45% 45%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1350px)
+{
+    .content
+    {
+        &__block
+        {
+            &__info
+            {
+                &__subblock
+                {
+                    &__subcontent
+                    {
+                        margin-left: 20px;
+                        grid-template-columns: 48% 48%;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media(max-width: 1050px)
 {
     .content
     {
         width: 93%;
+        &__title
+        {
+            font-size: 38px;
+        }
+        &__block
+        {
+            &__title
+            {
+                font-size: 36px;
+            }
+            &__info
+            {
+                margin-left: 10px;
+                &__title
+                {
+                    font-size: 32px;
+                }
+                &__subblock
+                {
+                    margin-bottom: 80px;
+                    &__title
+                    {
+                        font-size: 26px;
+                    }
+                    &__subcontent
+                    {
+                        margin-left: 15px;
+                        margin-top: 20px;
+                        gap: 30px;
+                        &__subblock
+                        {
+                            &__title
+                            {
+                                font-size: 26px;
+                                color: #fff;
+                            }
+                            &__text
+                            {
+                                font-size: 20px;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 850px)
+{
+    .content
+    {
+        &__title
+        {
+            font-size: 32px;
+        }
+        &__block
+        {
+            &__title
+            {
+                margin-top: 0;
+                font-size: 30px;
+            }
+            &__info
+            {
+                &__title
+                {
+                    font-size: 28px;
+                }
+                &__subblock
+                {   
+                    &__title
+                    {
+                        font-size: 24px;
+                    }
+                    margin-bottom: 60px;
+                    &__subcontent
+                    {
+                        grid-template-columns: 94%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 550px)
+{
+    .content
+    {
+        width: 93%;
+        &__title
+        {
+            font-size: 29px;
+        }
+        &__block
+        {
+            &__title
+            {
+                font-size: 28px;
+            }
+            &__info
+            {
+                margin-left: 0;
+                &__title
+                {
+                    font-size: 24px;
+                }
+                &__subblock
+                {
+                    &__title
+                    {
+                        font-size: 21px;
+                    }
+                    &__subcontent
+                    {
+                        grid-template-columns: 96%;
+                        &__subblock
+                        {
+                            &__title
+                            {
+                                font-size: 20px;
+                                color: #fff;
+                            }
+                            &__text
+                            {
+                                font-size: 17px;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
