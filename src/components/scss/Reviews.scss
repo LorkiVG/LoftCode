@@ -1,0 +1,57 @@
+.reviews
+{
+    width: 88%;
+    margin-top: 100px;
+    &__title
+    {
+        width: 100%;
+        font-size: 48px;
+        font-weight: 600;
+        color: #fff;
+    }
+    &__text
+    {
+        font-size: 36px;
+        color: #fff;
+    }
+    &__content
+    {
+        margin-top: 20px;
+        &__answer
+        {
+            display: flex;
+            flex-direction: column;
+            margin-right: 30px;
+            &__stars
+            {
+                width: 100%;
+                text-align: start;
+                margin-left: 5px;
+            }
+            &__text
+            {
+                width: 100%;
+                font-size: 22px;
+                color: #fff;
+                text-align: start;
+            }
+            &__name
+            {
+                width: 100%;
+                font-size: 22px;
+                color: #fff;
+                text-align: start;
+                margin-top: 5px;
+                margin-left: 5px;
+            }
+            &__company
+            {
+                width: 100%;
+                font-size: 22px;
+                color: #fff;
+                text-align: start;
+                margin-left: 5px;
+            }
+        }
+    }
+}

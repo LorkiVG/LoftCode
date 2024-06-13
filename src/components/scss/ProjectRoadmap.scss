@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 100px;
     &__title
     {
         width: 100%;
@@ -44,7 +45,7 @@
                 &__subcontent
                 {
                     margin-top: 45px;
-                    margin-left: 30px;
+                    margin-left: 60px;
                     display: grid;
                     grid-template-columns: 35% 35%;
                     gap: 50px;

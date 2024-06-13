@@ -4,8 +4,8 @@
     import { Carousel, Navigation, Slide } from 'vue3-carousel'
     import 'vue3-carousel/dist/carousel.css'
     
-    const answersSlider : any = ref();
-    const answers : Ref<Answer[]> = ref(
+    const reviewsSlider : any = ref();
+    const reviews : Ref<Answer[]> = ref(
     [
         {
             stars: 5,
@@ -35,20 +35,29 @@
 </script>
 
 <template>
-    <div class="answers">
-        <p class="answers__title">Reviews</p>
-        <p class="answers__clients__title">What our clients are saying about us.</p>
-        <div class="answers__clients">
-            <Carousel :wrapAround="true" ref="answersSlider">
-                <Slide v-for="(answer, index) in answers" :key="index">
-                    <div class="answers__clients__answer">
-                        <img v-for="indexStar in answer.stars" :key="indexStar" src="/src/assets/img/star.png" class="answers__our__clients__answer__star">
-                        <p class="answers__clients__answer__text">{{ answer.text }}</p>
-                        <p class="answers__clients__answer__name">{{ answer.clientName }}</p>
-                        <p class="answers__clients__answer__position">{{ answer.clientCompany }}</p>
+    <div class="reviews">
+        <p class="reviews__title">Reviews</p>
+        <p class="reviews__text">What our clients are saying about us.</p>
+        <div class="reviews__content">
+            <Carousel ref="reviewsSlider" :wrapAround="true" snapAlign="start" :items-to-show="2.5">
+                <Slide v-for="(answer, index) in reviews" :key="index">
+                    <div class="reviews__content__answer">
+                        <div class="reviews__content__answer__stars">
+                            <img v-for="indexStar in answer.stars" :key="indexStar" src="/src/assets/img/components/Reviews/star.png" class="reviews__content__answer__stars__star">
+                        </div>
+                        <p class="reviews__content__answer__text">{{ answer.text }}</p>
+                        <p class="reviews__content__answer__name">{{ answer.clientName }}</p>
+                        <p class="reviews__content__answer__company">{{ answer.clientCompany }}</p>
                     </div>
                 </Slide>
             </Carousel>
         </div>
     </div>
 </template>
+<style>
+.carousel__slide
+{
+    align-items: start;
+}
+</style>
+<style lang="scss" scoped src="./scss/Reviews.scss"></style>

@@ -3,13 +3,16 @@
     import About from '../components/About.vue';
     import ProjectRoadmap from '../components/ProjectRoadmap.vue';
     import Projects from '../components/Projects.vue';
+    import Answers from '../components/Answers.vue';
     import Contacts from '../components/Contacts.vue';
+
 </script>
 <template>
     <BGBlock/>
     <About/>
     <ProjectRoadmap/>
     <Projects/>
+    <Answers/>
     <Contacts/>
 </template>
 
