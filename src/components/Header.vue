@@ -1,9 +1,22 @@
+<script setup lang="ts">
+    import { ref, Ref } from 'vue';
+
+    const emits = defineEmits(['toggleBurger']);
+
+    const burgerActive : Ref<boolean> = ref(false);
+
+    const onBurgerActivate = () => 
+    {
+        burgerActive.value = !burgerActive.value;
+        emits('toggleBurger');
+    }
+</script>
 <template>
     <div class="header">
         <div class="header__content">
             <img src="/src/assets/img/components/Header/logo/white.svg" class="header__content__logo">
             
-            <nav class="header__content__nav">
+            <nav class="header__content__nav" :class="burgerActive ? 'active' : ''">
                 <nav class="header__content__nav__links">
                     <a href="#" class="header__content__nav__links__link">Services</a>
                     <a href="#" class="header__content__nav__links__link">Projects</a>
@@ -17,7 +30,7 @@
                 <button class="header__content__nav__button">Propose project</button>
             </nav>
             <button class="header__content__button">Propose project</button>
-            <div class="header__content__burger">
+            <div @click="onBurgerActivate" class="header__content__burger" :class="burgerActive ? 'active' : ''">
                 <div class="header__content__burger__lines"></div>
             </div>
         </div>

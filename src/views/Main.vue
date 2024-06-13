@@ -5,7 +5,6 @@
     import Projects from '../components/Projects.vue';
     import Answers from '../components/Answers.vue';
     import Contacts from '../components/Contacts.vue';
-
 </script>
 <template>
     <BGBlock/>

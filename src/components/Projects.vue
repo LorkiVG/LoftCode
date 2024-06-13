@@ -11,7 +11,7 @@
                         <p class="projects__content__projects__project__info__title"> API for IkPay online service</p>
                         <p class="projects__content__projects__project__info__category">Development, Support</p>
                     </div>
-                    <img src="/src/assets/img/components/Projects/sberpay.png" class="projects__content__projects__project__img">
+                    <img src="/src/assets/img/components/Projects/ikpay.png" class="projects__content__projects__project__img">
                 </div>
                 <div class="projects__content__projects__project center">
                     <div class="projects__content__projects__project__info">

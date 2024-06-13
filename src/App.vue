@@ -7,10 +7,9 @@ import { useRoute } from 'vue-router';
 import { container } from "jenesius-vue-modal";
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
+import { windowWidth } from './ts/handlers/WindowWidthHandler';
 
 const isBurgerActive : Ref<boolean> = ref(false);
-
-const windowWidth = ref(window.innerWidth);
 
 const toggleBurger = () => 
 {
@@ -50,7 +49,7 @@ onUnmounted(() =>
 </script>
 
 <template>
-    <Header/>
+    <Header @toggleBurger="toggleBurger"/>
     <perfect-scrollbar v-if="windowWidth > 1050" ref="scroll">
         <router-view v-slot="{ Component }">
             <transition name="pageOpacity" mode="out-in">

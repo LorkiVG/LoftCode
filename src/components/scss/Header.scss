@@ -39,6 +39,7 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			transition: .5s;
 			&__links
 			{
 				&__link
@@ -48,9 +49,16 @@
 					font-weight: 700;
 					font-size: 14px;
 					line-height: 17px;
-					color: #fff;
+					color: #e5e5e5;
 					text-decoration: none;
 					margin-right: 26px;
+					transition: .5s;
+					transform: scale(1);
+					&:hover
+					{
+						color: #fff !important;
+						transform: scale(1.1) !important;
+					}
 				}
 			}
 			&__switch 
@@ -177,13 +185,11 @@
 		&__burger 
 		{
 			cursor: pointer;
+			position: relative;
 			z-index: 200000;
-			position: absolute;
-			width: 70px;
-			height: 70px;
+			width: 50px;
+			height: 50px;
 			display: none;
-			margin-top: 8px;
-			right: 10px;
 			&:hover &__lines
 			{
 				filter: brightness(0.9);
@@ -217,15 +223,16 @@
 		}
 		&__burger.active 
 		{
-			.header__burger__lines::before 
+			.header__content__burger__lines 
+			{
+				background-color: transparent;
+			}
+			.header__content__burger__lines::before 
 			{
 				top: 0;
 				transform: rotate(45deg);
 			}
-		}
-		&__burger.active 
-		{
-			.header__burger__lines::after 
+			.header__content__burger__lines::after 
 			{
 				top: 0;
 				transform: rotate(-45deg);
@@ -238,17 +245,106 @@
 {
 	.header
 	{
+		height: 80px;
+		&__content
+		{
+			width: 90%;
+			&__logo
+			{
+				height: 55%;
+			}
+			&__nav
+			{
+				transform: translateX(100%);
+				visibility: hidden;
+				&.active
+				{
+					visibility: visible;
+					transform: translateX(0);
+				}
+				background-color: #050516;
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 60%;
+				height: 100vh;
+				flex-direction: column;
+				justify-content: start;
+				
+				&__links
+				{
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					margin-top: 20px;
+					&__link
+					{
+						margin-right: 0;
+						margin-top: 20px;
+						font-size: 34px;
+					}
+
+				}
+				&__switch
+				{
+					margin-top: 20px;
+				}
+				&__button
+				{
+					margin-top: 13px;
+					display: flex;
+				}
+			}
+			&__button
+			{
+				display: none;
+			}
+			&__burger
+			{
+				display: block;
+			}
+		}
+	}
+}
+
+@media(max-width: 850px)
+{
+	.header
+	{
 		&__content
 		{
 			&__nav
 			{
-				width: 50%;
-				min-width: 320px;
+				width: 70%;
+			}
+		}
+	}
+}
 
-				&__button
-				{
-					display: flex;
-				}
+@media(max-width: 650px)
+{
+	.header
+	{
+		&__content
+		{
+			&__nav
+			{
+				width: 80%;
+			}
+		}
+	}
+}
+
+
+@media(max-width: 450px)
+{
+	.header
+	{
+		&__content
+		{
+			&__nav
+			{
+				width: 90%;
 			}
 		}
 	}
