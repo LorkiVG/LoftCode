@@ -8,6 +8,7 @@ import { container } from "jenesius-vue-modal";
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import { windowWidth } from './ts/handlers/WindowWidthHandler';
+import { ThemeHandler } from './ts/handlers/ThemeHandler';
 
 const isBurgerActive : Ref<boolean> = ref(false);
 
@@ -46,6 +47,33 @@ onUnmounted(() =>
     window.removeEventListener('resize', onResize);
 });
 
+const styles = import.meta.glob('./scss/themes/*.scss', { query: '?inline' });
+
+const styleElem = document.createElement('style');
+document.head.appendChild(styleElem);
+
+const loadTheme = async (name: string) => 
+{
+    try 
+    {
+        const styleModule = await styles[`./scss/themes/${name}.scss`]();
+        const styleContent = (styleModule as { default: string }).default;
+        styleElem.textContent = styleContent;
+    } 
+    catch (error) 
+    {
+        console.error(`Error loading ${name} theme`, error);
+    }
+};
+
+loadTheme(ThemeHandler.currentTheme.value);
+
+watch(ThemeHandler.currentTheme, (newTheme) => 
+{
+    console.log('TEST');
+    
+    loadTheme(newTheme);
+});
 </script>
 
 <template>
@@ -53,7 +81,7 @@ onUnmounted(() =>
     <perfect-scrollbar v-if="windowWidth > 1050" ref="scroll">
         <router-view v-slot="{ Component }">
             <transition name="pageOpacity" mode="out-in">
-                <component :is="Component" />
+                <component  :is="Component" />
             </transition>
         </router-view>
     </perfect-scrollbar>
@@ -65,3 +93,16 @@ onUnmounted(() =>
     <container />
     <Footer/>
 </template>
+
+
+<style lang="scss">
+.dark
+{
+    @import './scss/themes/dark.scss';
+}
+
+.light 
+{
+    @import './scss/themes/light.scss';
+}
+</style>

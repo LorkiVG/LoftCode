@@ -4,6 +4,7 @@ body
 	padding: 0;
 	width: 100%;
 	background-color: #03030f;
+	transition: .6s;
 }
 #app
 {
@@ -178,11 +179,4 @@ p, h1, h2, h3, h4, h5, h6, input, a, textarea, input::placeholder, textarea::pla
 .carousel__track
 {
 	margin: 0 !important;
-}
-
-@media(max-width: 1050px)
-{
-	#app
-	{
-	}
 }

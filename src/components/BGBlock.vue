@@ -8,7 +8,10 @@
     let bgMaxIndex : number = 3;
     setInterval(() => 
     {
-        bgSlider.value.next();
+        if(bgSlider.value)
+        {
+            bgSlider.value.next();
+        }
     }, 3000);
 </script>
 <template>
