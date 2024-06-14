@@ -61,6 +61,7 @@
                     height: 70%;
                     border-radius: 25px;
                     font-size: 21px;
+                    box-sizing: border-box;
                 }
                 &__button
                 {
@@ -80,7 +81,8 @@
                     transition: .6s;
                     border: #fff solid 1px;
                     z-index: 44;
-                    &:hover {
+                    &:hover 
+                    {
                         transform: scale(1.1);
                     }
                 }
@@ -117,50 +119,48 @@
 {
     .contacts
     {
-        margin-top: 80px;
         width: 93%;
+        margin-top: 80px;
         &__title
         {
             font-size: 38px;
         }
-        &__block
+        &__form
         {
+            width: 100%;
             &__title
             {
-                font-size: 36px;
+                margin-top: 8px;
+                font-size: 32px;
             }
-            &__info
+            &__content
             {
-                margin-left: 10px;
-                &__title
+                flex-direction: column;
+                &__block
                 {
-                    font-size: 32px;
-                }
-                &__subblock
-                {
-                    margin-bottom: 80px;
-                    &__title
+                    margin-bottom: 0;
+                    &__input
                     {
-                        font-size: 26px;
+                        margin-top: 22px;
+                        height: 52px;
                     }
-                    &__subcontent
+                    &__textarea
                     {
-                        margin-left: 15px;
-                        margin-top: 20px;
-                        gap: 30px;
-                        &__subblock
-                        {
-                            &__title
-                            {
-                                font-size: 26px;
-                                color: #fff;
-                            }
-                            &__text
-                            {
-                                font-size: 20px;
-                                color: #fff;
-                            }
-                        }
+                        margin-top: 22px;
+                        height: 170px;
+                    }
+                    &__button
+                    {
+                        width: 220px;
+                        height: 62px;
+                    }
+                    &:nth-child(1)
+                    {
+                        width: 100%;
+                    }
+                    &:nth-child(2)
+                    {
+                        width: 100%;
                     }
                 }
             }
@@ -170,36 +170,33 @@
 
 @media(max-width: 850px)
 {
-    .content
+    .contacts
     {
         margin-top: 60px;
         &__title
         {
             font-size: 32px;
         }
-        &__block
+        &__form
         {
             &__title
             {
-                margin-top: 0;
-                font-size: 30px;
+                margin-top: 5px;
+                font-size: 24px;
             }
-            &__info
+            &__content
             {
-                &__title
+                flex-direction: column;
+                &__block
                 {
-                    font-size: 28px;
-                }
-                &__subblock
-                {   
-                    &__title
+                    &__input
                     {
-                        font-size: 24px;
+                        margin-top: 20px;
                     }
-                    margin-bottom: 60px;
-                    &__subcontent
+                    &__textarea
                     {
-                        grid-template-columns: 94%;
+                        margin-top: 20px;
+                        height: 160px;
                     }
                 }
             }
@@ -209,49 +206,20 @@
 
 @media(max-width: 550px)
 {
-    .content
+    .contacts
     {
         margin-top: 40px;
-        width: 93%;
-        &__title
+        &__form
         {
-            font-size: 29px;
-        }
-        &__block
-        {
-            &__title
+            &__content
             {
-                font-size: 28px;
-            }
-            &__info
-            {
-                margin-left: 0;
-                &__title
+                &__block
                 {
-                    font-size: 24px;
-                }
-                &__subblock
-                {
-                    &__title
+                    &__button
                     {
-                        font-size: 21px;
-                    }
-                    &__subcontent
-                    {
-                        grid-template-columns: 96%;
-                        &__subblock
-                        {
-                            &__title
-                            {
-                                font-size: 20px;
-                                color: #fff;
-                            }
-                            &__text
-                            {
-                                font-size: 17px;
-                                color: #fff;
-                            }
-                        }
+                        margin-right: 0;
+                        width: 210px;
+                        height: 55px;
                     }
                 }
             }
