@@ -61,5 +61,103 @@
     .reviews
     {
         width: 93%;
+        margin-top: 80px;
+        &__title
+        {
+            font-size: 38px;
+        }
+        &__text
+        {
+            font-size: 30px;
+            color: #fff;
+        }
+        &__content
+        {
+            &__answer
+            {
+                &__stars
+                {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 850px)
+{
+    .reviews
+    {
+        margin-top: 60px;
+        &__title
+        {
+            font-size: 32px;
+        }
+        &__text
+        {
+            font-size: 24px;
+            color: #fff;
+        }
+        &__content
+        {
+            &__answer
+            {
+                &__stars
+                {
+                    margin-left: 0;
+                }
+                &__text
+                {
+                    font-size: 21px;
+                }
+                &__name
+                {
+                    font-size: 21px;
+                }
+                &__company
+                {
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 550px)
+{
+    .reviews
+    {
+        margin-top: 40px;
+        &__title
+        {
+            font-size: 29px;
+        }
+        &__text
+        {
+            font-size: 18px;
+            color: #fff;
+        }
+        &__content
+        {
+            &__answer
+            {
+                &__stars
+                {
+                    margin-left: 0;
+                }
+                &__text
+                {
+                    font-size: 17px;
+                }
+                &__name
+                {
+                    font-size: 17px;
+                }
+                &__company
+                {
+                    font-size: 17px;
+                }
+            }
+        }
     }
 }
