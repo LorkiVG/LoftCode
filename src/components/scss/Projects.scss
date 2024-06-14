@@ -250,6 +250,17 @@
     .projects
 	{
 		width: 93%;
+		&__info
+		{
+			&__title
+			{
+				font-size: 38px;
+			}
+			&__text
+			{
+				font-size: 30px;
+			}
+		}
 		&__content
 		{
 			margin-top: 20px;
@@ -260,7 +271,7 @@
 				&.top &__project
 				{
 					width: 100% !important;
-					height: 400px;
+					height: 450px;
 					&.left
 					{
 						background: linear-gradient(1.06deg, #b6ef26 0%, #36813E 100%);
@@ -269,6 +280,10 @@
 					{
 						margin-top: 25px;
 					}
+					&__img
+					{
+						height: 90%;
+					}
 				}
 				
 				&.down &__project
@@ -276,7 +291,6 @@
 					height: 450px;
 					&__info
 					{
-						top: 18px;
 						&__title
 						{
 							font-size: 26px;
@@ -285,13 +299,6 @@
 						{
 							font-size: 21px;
 						}
-					}
-					&__img
-					{
-						position: absolute;
-						bottom: 25px;
-						right: 25px;
-						height: 58%;
 					}
 				}
 				&__project
@@ -305,6 +312,149 @@
 						&__category
 						{
 							font-size: 21px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media(max-width: 850px)
+{
+    .projects
+	{
+		&__info
+		{
+			&__title
+			{
+				font-size: 32px;
+			}
+			&__text
+			{
+				font-size: 24px;
+			}
+		}
+		&__content
+		{
+			margin-top: 20px;
+			
+			&__projects
+			{
+				&.top &__project
+				{
+					width: 100% !important;
+					height: 400px;
+					&__img
+					{
+						height: 85%;
+					}
+				}
+				
+				&.down &__project
+				{
+					height: 400px;
+					&__info
+					{
+						top: 18px;
+						&__title
+						{
+							font-size: 24px;
+						}
+						&__category
+						{
+							font-size: 20px;
+						}
+					}
+					&__img
+					{
+						height: 60%;
+					}
+				}
+				&__project
+				{
+					&__info
+					{
+						&__title
+						{
+							font-size: 24px;
+						}
+						&__category
+						{
+							font-size: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media(max-width: 550px)
+{
+    .projects
+	{
+		&__info
+		{
+			&__title
+			{
+				font-size: 29px;
+			}
+			&__text
+			{
+				font-size: 24px;
+			}
+		}
+		&__content
+		{
+			margin-top: 20px;
+			
+			&__projects
+			{
+				flex-direction: column;
+				&.top &__project
+				{
+					width: 100% !important;
+					height: 350px;
+					&__img
+					{
+						height: 80%;
+					}
+				}
+				
+				&.down &__project
+				{
+					height: 350px;
+					&__info
+					{
+						top: 18px;
+						&__title
+						{
+							font-size: 23px;
+						}
+						&__category
+						{
+							font-size: 19px;
+						}
+					}
+					&__img
+					{
+						bottom: 15px;
+						right: 15px;
+						height: 52%;
+					}
+				}
+				&__project
+				{
+					&__info
+					{
+						&__title
+						{
+							font-size: 23px;
+						}
+						&__category
+						{
+							font-size: 19px;
 						}
 					}
 				}
