@@ -1,8 +1,8 @@
 <script setup lang="ts">
     import { ref, Ref } from 'vue';
 
-    import { Carousel, Navigation, Slide } from 'vue3-carousel'
-    import { windowWidth } from './../ts/handlers/WindowWidthHandler';
+    import { Carousel, Slide } from 'vue3-carousel'
+    import { windowWidth } from '../ts/handlers/WindowWidthHandler';
     import 'vue3-carousel/dist/carousel.css'
     
     const reviewsSlider : any = ref();

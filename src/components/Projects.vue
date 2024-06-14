@@ -25,7 +25,7 @@
                 <div class="projects__content__projects__project">
                     <div class="projects__content__projects__project__info">
                         <h1 class="projects__content__projects__project__info__title">Landing page of a large cryptocurrency exchanger CRAPPO</h1>
-                        <p class="projects__content__projects__project__info__category" style="margin-top:20px;">Design, Development, Support</p>
+                        <p class="projects__content__projects__project__info__category">Design, Development, Support</p>
                     </div>
                     <img class="projects__content__projects__project__img" src="/src/assets/img/components/Projects/crappo.png" alt="">
                 </div>

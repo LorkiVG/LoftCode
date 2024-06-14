@@ -3,7 +3,7 @@
     import About from '../components/About.vue';
     import ProjectRoadmap from '../components/ProjectRoadmap.vue';
     import Projects from '../components/Projects.vue';
-    import Answers from '../components/Answers.vue';
+    import Reviews from '../components/Reviews.vue';
     import Contacts from '../components/Contacts.vue';
 </script>
 <template>
@@ -11,7 +11,7 @@
     <About/>
     <ProjectRoadmap/>
     <Projects/>
-    <Answers/>
+    <Reviews/>
     <Contacts/>
 </template>
 
