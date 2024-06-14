@@ -17,6 +17,14 @@
 		&__policy
 		{
 			cursor: pointer;
+			transform: scale(1);
+			transition: .5s;
+			
+			&:hover
+			{
+				color: #fff;
+				transform: scale(1.05);
+			}
 		}
 	}
 	
