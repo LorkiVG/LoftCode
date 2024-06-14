@@ -132,6 +132,7 @@
 			}
 			&__button
 			{
+				cursor: pointer;
 				display: none;
 				width: 180px;
 				height: 44px;
@@ -145,8 +146,8 @@
 				font-size: 14px;
 				line-height: 18px;
 				transition: .6s all;
-				color: #03030F;
-				cursor: pointer;
+				
+				
 				&:hover 
 				{
 					transform: scale(1.1);
