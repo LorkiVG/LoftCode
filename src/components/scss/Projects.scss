@@ -80,8 +80,15 @@
 			}
 			&__project
 			{
+				cursor: pointer;
 				border-radius: 20px;
 				position: relative;
+				transform: scale(1);
+				transition: .5s;
+				&:hover
+				{
+					transform: scale(1.01);
+				}
 				&__info
 				{
 					position: absolute;
