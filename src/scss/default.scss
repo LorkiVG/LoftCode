@@ -3,7 +3,7 @@ body
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	background-color: #03030f;
+	background-color: var(--app-bg-color, #fff);
 	transition: .6s;
 }
 #app
@@ -29,7 +29,7 @@ p
 {
 	&::selection 
 	{
-		background-color: rgba(97, 97, 97, 0.2);
+		background-color: var(--selection-color, #61616133);
 	}
 }
 textarea,input,button 
@@ -45,126 +45,126 @@ textarea,input,button
     resize: none; 
 	&::selection
     {
-		background-color: rgba(97, 97, 97, 0.2);
+		background-color: var(--selection-color, #61616133);
 	}
 }
 b 
 {
 	&::selection
     {
-		background-color: rgba(97, 97, 97, 0.2);
+		background-color: var(--selection-color, #61616133);
 	}
 }
 h1
 {
 	&::selection
     {
-		background-color: rgba(97, 97, 97, 0.2);
+		background-color: var(--selection-color, #61616133);
 	}
 }
 h2
 {
 	&::selection
     {
-		background-color: rgba(97, 97, 97, 0.2);
+		background-color: var(--selection-color, #61616133);
 	}
 }
 h3
 {
 	&::selection
     {
-		background-color: rgba(97, 97, 97, 0.2);
+		background-color: var(--selection-color, #61616133);
 	}
 }
 h4
 {
 	&::selection
     {
-		background-color: rgba(97, 97, 97, 0.2);
+		background-color: var(--selection-color, #61616133);
 	}
 }
 h5
 {
 	&::selection
     {
-		background-color: rgba(97, 97, 97, 0.2);
+		background-color: var(--selection-color, #61616133);
 	}
 }
 h6 
 {
 	&::selection 
     {
-		background-color: rgba(97, 97, 97, 0.2);
+		background-color: var(--selection-color, #61616133);
 	}
 }
 a 
 {
 	&::selection 
     {
-		background-color: rgba(97, 97, 97, 0.2);
+		background-color: var(--selection-color, #61616133);
 	}
 }
 img 
 {
 	&::selection 
     {
-		background-color: rgba(97, 97, 97, 0.2);
+		background-color: var(--selection-color, #61616133);
 	}
 }
 button 
 {
 	&::selection 
     {
-		background-color: rgba(97, 97, 97, 0.2);
+		background-color: var(--selection-color, #61616133);
 	}
 }
 label 
 {
 	&::selection 
     {
-		background-color: rgba(97, 97, 97, 0.2);
+		background-color: var(--selection-color, #61616133);
 	}
 }
 input 
 {
 	&::selection 
     {
-		background-color: rgba(97, 97, 97, 0.2);
+		background-color: var(--selection-color, #61616133);
 	}
 }
 legend 
 {
 	&::selection 
     {
-		background-color: rgba(97, 97, 97, 0.2);
+		background-color: var(--selection-color, #61616133);
 	}
 }
 th 
 {
 	&::selection 
     {
-		background-color: rgba(97, 97, 97, 0.2);
+		background-color: var(--selection-color, #61616133);
 	}
 }
 td 
 {
 	&::selection 
     {
-		background-color: rgba(97, 97, 97, 0.2);
+		background-color: var(--selection-color, #61616133);
 	}
 }
 caption 
 {
 	&::selection 
     {
-		background-color: rgba(97, 97, 97, 0.2);
+		background-color: var(--selection-color, #61616133);
 	}
 }
 div 
 {
 	&::selection 
     {
-		background-color: rgba(97, 97, 97, 0.2);
+		background-color: var(--selection-color, #61616133);
 	}
 }
 p, h1, h2, h3, h4, h5, h6, input, a, textarea, input::placeholder, textarea::placeholder, button

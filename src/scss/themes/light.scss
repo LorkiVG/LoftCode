@@ -1,4 +1,37 @@
-body
+:root
 {
-    background-color: #00e5ff !important;
+    --app-bg-color: #fff;
+
+    --selection-color: #61616133;
+
+    --header-bg-color: #b4b4b4;
+    --header-logo-image: url('./../../assets/img/components/Header/logo/black.svg');
+    --header-link-color: #212121;
+    --header-hover-link-color: #353535;
+    --header-button-text-color: #fff;
+    --header-button-bg-color: #212121;
+
+    --about-title-color: #212121;
+    --about-text-color: #212121;
+    --about-button-text-color: #212121;
+    --about-button-border-color: #212121;
+
+    --projects-roadmap-title-color: #212121;
+    --projects-roadmap-text-color: #212121;
+
+    --projects-title-color: #212121;
+    --projects-text-color: #212121;
+
+    --reviews-title: #212121;
+    --reviews-text: #212121;
+
+    --contacts-title-color: #212121;
+    --contacts-text-color: #212121;
+    --contacts-input-color: #212121;
+    --contacts-textarea-color: #212121;
+    --contacts-button-text-color: #212121;
+    --contacts-button-border-color: #212121;
+
+    --footer-text-color: #212121;
+    --footer-hover-text-color: #212121;
 }
