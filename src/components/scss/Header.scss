@@ -33,7 +33,7 @@
 		&__logo
 		{
 			cursor: pointer;
-			height: 60%;
+			width: 80px;
 			transform: scale(1);
 			transition: .5s;
 			&:hover
@@ -265,7 +265,7 @@
 			width: 90%;
 			&__logo
 			{
-				height: 55%;
+				width: 75px;
 			}
 			&__nav
 			{
