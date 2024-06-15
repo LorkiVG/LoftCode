@@ -12,7 +12,7 @@
 		justify-content: space-between;
 		&__policy, &__copyright
 		{
-			color: #bebebe;
+			color: var(--footer-text-color, #212121);
 		}
 		&__policy
 		{
@@ -22,7 +22,7 @@
 			
 			&:hover
 			{
-				color: #fff;
+				color: var(--footer-hover-text-color, #353535);
 				transform: scale(1.05);
 			}
 		}

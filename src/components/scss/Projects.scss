@@ -9,14 +9,14 @@
 		&__title
 		{
 			margin-top: 35px;
-			color: #fff;
+			color: var(--projects-title-color, #212121);
 			font-size: 46px;
 			font-weight: 600;
 		}
 		&__text
 		{
 			margin-top: 10px;
-			color: #fff;
+			color: var(--projects-text-color, #212121);
 			font-size: 38px;
 		}
 	}

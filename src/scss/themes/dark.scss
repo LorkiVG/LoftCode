@@ -5,11 +5,13 @@
     --selection-color: #61616133;
 
     --header-bg-color: #090920;
-    --header-logo-image: url('./../../assets/img/components/Header/logo/white.svg');
     --header-link-color: #e5e5e5;
     --header-hover-link-color: #fff;
     --header-button-text-color: #03030F;
     --header-button-bg-color: #fff;
+
+    --header-nav-bg-color: #050516;
+    --header-burger-bg-color: #fff;
 
     --about-title-color: #fff;
     --about-text-color: #fff;
@@ -22,13 +24,15 @@
     --projects-title-color: #fff;
     --projects-text-color: #fff;
 
-    --reviews-title: #fff;
-    --reviews-text: #fff;
+    --reviews-title-color: #fff;
+    --reviews-text-color: #fff;
 
     --contacts-title-color: #fff;
     --contacts-text-color: #fff;
-    --contacts-input-color: #fff;
-    --contacts-textarea-color: #fff;
+    --contacts-input-text-color: #212121;
+    --contacts-input-bg-color: #fff;
+    --contacts-textarea-text-color: #212121;
+    --contacts-textarea-bg-color: #fff;
     --contacts-button-text-color: #fff;
     --contacts-button-border-color: #fff;
 

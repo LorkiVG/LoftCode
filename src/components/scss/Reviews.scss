@@ -7,12 +7,12 @@
         width: 100%;
         font-size: 48px;
         font-weight: 600;
-        color: #fff;
+        color: var(--reviews-title-color, #212121);
     }
     &__text
     {
         font-size: 36px;
-        color: #fff;
+        color: var(--reviews-text-color, #212121);
     }
     &__content
     {
@@ -32,14 +32,14 @@
             {
                 width: 100%;
                 font-size: 22px;
-                color: #fff;
+                color: var(--reviews-text-color, #212121);
                 text-align: start;
             }
             &__name
             {
                 width: 100%;
                 font-size: 22px;
-                color: #fff;
+                color: var(--reviews-text-color, #212121);
                 text-align: start;
                 margin-top: 5px;
                 margin-left: 5px;
@@ -48,7 +48,7 @@
             {
                 width: 100%;
                 font-size: 22px;
-                color: #fff;
+                color: var(--reviews-text-color, #212121);
                 text-align: start;
                 margin-left: 5px;
             }
@@ -69,7 +69,6 @@
         &__text
         {
             font-size: 30px;
-            color: #fff;
         }
         &__content
         {
@@ -96,7 +95,6 @@
         &__text
         {
             font-size: 24px;
-            color: #fff;
         }
         &__content
         {
@@ -135,7 +133,6 @@
         &__text
         {
             font-size: 18px;
-            color: #fff;
         }
         &__content
         {

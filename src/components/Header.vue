@@ -25,8 +25,9 @@
 <template>
     <div class="header">
         <div class="header__content">
-            <img src="/src/assets/img/components/Header/logo/white.svg" class="header__content__logo">
-            
+            <img v-if="ThemeHandler.currentTheme.value == 'dark'" src="/src/assets/img/components/Header/logo/white.svg" alt="LoftCode" class="header__content__logo">
+            <img v-else-if="ThemeHandler.currentTheme.value == 'white'" src="/src/assets/img/components/Header/logo/dark.svg" alt="LoftCode" class="header__content__logo">
+            <img v-else src="/src/assets/img/components/Header/logo/dark.svg" alt="LoftCode" class="header__content__logo">
             <nav class="header__content__nav" :class="burgerActive ? 'active' : ''">
                 <nav class="header__content__nav__links">
                     <a href="#" class="header__content__nav__links__link">Services</a>

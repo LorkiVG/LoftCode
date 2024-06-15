@@ -9,7 +9,7 @@
     {
         width: 100%;
         font-size: 46px;
-        color: #fff;
+        color: var(--projects-roadmap-title-color, #212121);
         font-weight: 600;
         margin-bottom: 10px;
     }
@@ -19,7 +19,7 @@
         &__title
         {
             font-size: 44px;
-            color: #fff;
+            color: var(--projects-roadmap-text-color, #212121);
             font-weight: 600;
         }
         &__info
@@ -29,7 +29,7 @@
             &__title
             {
                 font-size: 40px;
-                color: #fff;
+                color: var(--projects-roadmap-text-color, #212121);
             }
             &__subblock
             {
@@ -40,7 +40,7 @@
                 {
                     font-size: 34px;
                     font-weight: 500;
-                    color: #fff;
+                    color: var(--projects-roadmap-text-color, #212121);
                 }
                 &__subcontent
                 {
@@ -54,12 +54,12 @@
                         &__title
                         {
                             font-size: 32px;
-                            color: #fff;
+                            color: var(--projects-roadmap-text-color, #212121);
                         }
                         &__text
                         {
                             font-size: 26px;
-                            color: #fff;
+                            color: var(--projects-roadmap-text-color, #212121);
                         }
                     }
                 }
@@ -172,12 +172,10 @@
                             &__title
                             {
                                 font-size: 26px;
-                                color: #fff;
                             }
                             &__text
                             {
                                 font-size: 20px;
-                                color: #fff;
                             }
                         }
                     }
@@ -263,12 +261,10 @@
                             &__title
                             {
                                 font-size: 20px;
-                                color: #fff;
                             }
                             &__text
                             {
                                 font-size: 17px;
-                                color: #fff;
                             }
                         }
                     }

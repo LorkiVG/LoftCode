@@ -15,14 +15,14 @@
         {
             font-weight: 600;
             font-size: 46px;
-            color: var(--app-bg-color, #03030f);
+            color: var(--about-title-color, #212121);
         }
         &__text
         {
             margin-left: 10px;
             margin-top: 20px;
             font-size: 34px;
-            color: var(--app-bg-color, #03030f);
+            color: var( --about-text-color, #212121);
         }
         &__button
         {
@@ -37,10 +37,10 @@
             font-weight: bold;
             font-size: 18px;
             line-height: 18px;
-            color: var(--app-bg-color, #03030f);
+            color: var( --about-button-text-color, #212121);
             cursor: pointer;
             transition: .6s;
-            border: var(--app-bg-color, #03030f) solid 1px;
+            border: var( --about-button-border-color, #212121) solid 1px;
             &:hover {
                 transform: scale(1.1);
             }
