@@ -1,0 +1,31 @@
+.animated 
+{
+    opacity: 0;
+    transition: opacity 1.5s ease;
+  
+    &[data-animate-type="scale"] 
+    {
+        transform: scale(0);
+        transition: transform 1.5s ease;
+    }
+  
+    &[data-animate-type="slide"] 
+    {
+        transform: translateY(100%);
+        transition: transform 1.5s ease;
+    }
+}
+  
+.animated.active 
+{
+    opacity: 1;
+  
+    &[data-animate-type="scale"] 
+    {
+        transform: scale(1);
+    }
+  
+    &[data-animate-type="slide"] {
+        transform: translateY(0);
+    }
+}

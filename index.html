@@ -1,6 +1,19 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <style>
+            .light-theme body
+            {
+                background-color: #e7e7e7;
+            }
+            .dark-theme body
+            {
+                background-color: #03030f;
+            }
+        </style>
+        <script>
+            document.documentElement.className = (localStorage.getItem('theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : null) || 'light') + '-theme';
+        </script>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />

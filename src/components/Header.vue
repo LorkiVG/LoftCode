@@ -25,7 +25,7 @@
 <template>
     <div class="header">
         <div class="header__content">
-            <img v-if="ThemeHandler.currentTheme.value == 'dark'" src="/src/assets/img/components/Header/logo/white.svg" alt="LoftCode" class="header__content__logo">
+            <img v-if="ThemeHandler.currentTheme.value == 'dark'" src="/src/assets/img/components/Header/logo/light.svg" alt="LoftCode" class="header__content__logo">
             <img v-else-if="ThemeHandler.currentTheme.value == 'white'" src="/src/assets/img/components/Header/logo/dark.svg" alt="LoftCode" class="header__content__logo">
             <img v-else src="/src/assets/img/components/Header/logo/dark.svg" alt="LoftCode" class="header__content__logo">
             <nav class="header__content__nav" :class="burgerActive ? 'active' : ''">

@@ -1,8 +1,12 @@
-:root
+.light-theme
 {
     --app-bg-color: #e7e7e7;
 
     --selection-color: #61616133;
+
+    --preloader-bg-color: #e7e7e7;
+    --preloader-loader-border-color: #212121;
+    --preloader-loader-bar-color: #1972c0;
 
     --header-bg-color: #b4b4b4;
     --header-link-color: #212121;

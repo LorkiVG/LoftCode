@@ -1,8 +1,12 @@
-:root
+.dark-theme
 {
     --app-bg-color: #03030f;
 
     --selection-color: #61616133;
+
+    --preloader-bg-color: #03030f;
+    --preloader-loader-border-color: #fff;
+    --preloader-loader-bar-color: #BF2CFC;
 
     --header-bg-color: #090920;
     --header-link-color: #e5e5e5;
