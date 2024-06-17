@@ -1,6 +1,6 @@
 .preloader
 {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -10,6 +10,7 @@
     opacity: 1;
     visibility: visible;
     z-index: 346623;
+    transition: .8s;
     &.hide
     {
         opacity: 0;

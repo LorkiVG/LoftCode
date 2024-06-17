@@ -14,6 +14,8 @@ import Footer from './components/Footer.vue';
 
 import './scss/themes/light.scss';
 import './scss/themes/dark.scss';
+import { scrollHidden } from './ts/handlers/ScrollHandler';
+import { isPreloaded } from './ts/handlers/PreloaderHandler';
 
 const isBurgerActive : Ref<boolean> = ref(false);
 
@@ -49,6 +51,7 @@ const applyTheme = (theme: string) =>
 
 onMounted(() => 
 {
+    isPreloaded.value = false;
     applyTheme(ThemeHandler.currentTheme.value);
     window.addEventListener('resize', onResize);
 });
@@ -62,23 +65,43 @@ watch(ThemeHandler.currentTheme, (newTheme) =>
 {
     applyTheme(newTheme);
 });
+
+
+
+watch(scrollHidden, () => 
+{
+    const body : HTMLBodyElement | null = document.querySelector('body');
+    const ps : HTMLElement | null = document.querySelector('ps');
+    if(scrollHidden.value)
+    {
+        body?.classList.add('scrollHidden');
+        ps?.classList.add('scrollHidden');
+    }
+    else
+    {
+        body?.classList.remove('scrollHidden');
+        ps?.classList.remove('scrollHidden');
+    }
+});
 </script>
 
 <template>
-    <Preloader/>
-    <Header @toggleBurger="toggleBurger"/>
-    <perfect-scrollbar v-if="windowWidth > 1050" ref="scroll">
-        <router-view v-slot="{ Component }">
+    <div id="app">
+        <Header @toggleBurger="toggleBurger"/>
+        <perfect-scrollbar v-if="windowWidth > 1050" ref="scroll">
+            <router-view v-slot="{ Component }">
+                <transition name="pageOpacity" mode="out-in">
+                    <component  :is="Component" />
+                </transition>
+            </router-view>
+        </perfect-scrollbar>
+        <router-view v-else v-slot="{ Component }">
             <transition name="pageOpacity" mode="out-in">
-                <component  :is="Component" />
+                <component :is="Component" />
             </transition>
         </router-view>
-    </perfect-scrollbar>
-    <router-view v-else v-slot="{ Component }">
-        <transition name="pageOpacity" mode="out-in">
-            <component :is="Component" />
-        </transition>
-    </router-view>
-    <container />
-    <Footer/>
+        <container />
+        <Footer/>
+        <Preloader/>
+    </div>
 </template>

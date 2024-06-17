@@ -1,3 +1,3 @@
 import { ref, Ref } from "vue";
 
-export const scrollHide : Ref<boolean> = ref(false);
+export const scrollHidden : Ref<boolean> = ref(false);

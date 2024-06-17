@@ -1,45 +1,51 @@
 <script setup lang="ts">
-    import { onMounted, ref, Ref } from 'vue';
+    import { onMounted, onUnmounted, computed } from 'vue';
     import { ThemeHandler } from '../ts/handlers/ThemeHandler';
+    import { scrollHidden } from '../ts/handlers/ScrollHandler';
+    
+    import { totalResources, loadedResources, isPreloaded } from '../ts/handlers/PreloaderHandler';
     import { timeout } from '../ts/helpers/TimeOutHelper';
 
-    const isHide : Ref<boolean> = ref(false);
-
-    const progressBar : Ref<HTMLElement | null> = ref(null);
-
-    const progressBarScale = (percent : number) => 
+    const progress = computed(() => 
     {
-        if(progressBar.value)
-        {
-            progressBar.value.style.width = `${percent}%`;
-        }
-    }
-
-    onMounted(async () => 
-    {
-        progressBarScale(0);
-        await timeout(500);
-        progressBarScale(30);
-        await timeout(400);
-        progressBarScale(60);
-        await timeout(300);
-        progressBarScale(80);
-        await timeout(500); 
-        progressBarScale(100);
-        await timeout(1000);
-        isHide.value = true
+        if (totalResources.value === 0) return 0;
+        return (loadedResources.value / totalResources.value) * 100;
     });
-    
+
+    const onLoad = async () => 
+    {
+        if (totalResources.value > 0) 
+        {
+            
+            loadedResources.value = totalResources.value;
+            scrollHidden.value = false;
+
+            await timeout(2000);
+            isPreloaded.value = true;
+        }
+    };
+
+    onMounted(() => 
+    {
+        scrollHidden.value = true;
+        window.addEventListener('load', onLoad);
+    });
+
+    onUnmounted(() => 
+    {
+        scrollHidden.value = false;
+        window.removeEventListener('load', onLoad);
+    });
 </script>
 
 <template>
-    <div class="preloader" :class="isHide ? 'hide' : ''">
+    <div class="preloader" :class="isPreloaded ? 'hide' : ''">
         <div class="preloader__content">
             <img v-if="ThemeHandler.currentTheme.value == 'dark'" v-animate data-animate-type="scale" data-animate-alwaysshow src="/src/assets/img/components/Header/logo/light.svg" alt="LoftCode" class="preloader__content__logo">
             <img v-else-if="ThemeHandler.currentTheme.value == 'white'" v-animate data-animate-type="scale" data-animate-alwaysshow src="/src/assets/img/components/Header/logo/dark.svg" alt="LoftCode" class="preloader__content__logo">
             <img v-else v-animate data-animate-alwaysshow src="/src/assets/img/components/Header/logo/dark.svg" data-animate-type="scale"  alt="LoftCode" class="preloader__content__logo">
             <div v-animate data-animate-alwaysshow data-animate-type="scale" class="preloader__content__loader">
-                <span ref="progressBar" class="preloader__content__loader__bar"></span>
+                <span :style="{ width: progress + '%' }" class="preloader__content__loader__bar"></span>
             </div>
         </div>
     </div>
