@@ -15,7 +15,6 @@ const mutations =
 {
     setCurrentTheme(state: ThemeState, newTheme: string) 
     {
-        state.currentTheme = newTheme;
         localStorage.setItem('theme', newTheme);
     },
 };

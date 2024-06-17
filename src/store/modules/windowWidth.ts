@@ -1,44 +1,26 @@
-import { Module, ActionContext } from 'vuex';
+import { Module } from 'vuex';
 import { RootState } from '../index';
 
 export interface ScrollState 
 {
-    isBurgerMenuActive: boolean;
+    windowWidth: number;
 }
 
 const state: ScrollState = 
 {
-    isBurgerMenuActive: false,
-};
-
-const mutations = 
-{
-    setBurgerMenuActive(state: ScrollState, hidden: boolean) 
-    {
-        state.isBurgerMenuActive = hidden;
-    },
-};
-
-const actions = 
-{
-    toggleBurgerMenuActive({ commit }: ActionContext<ScrollState, RootState>, hidden: boolean) 
-    {
-        commit('setBurgerMenuActive', hidden);
-    },
+    windowWidth: 0,
 };
 
 const getters = 
 {
-    isBurgerMenuActive(state: ScrollState): boolean 
+    isBurgerMenuActive(state: ScrollState): number 
     {
-        return state.isBurgerMenuActive;
+        return state.windowWidth;
     },
 };
 
 export const scroll: Module<ScrollState, RootState> = 
 {
     state,
-    mutations,
-    actions,
     getters,
 };
