@@ -8,7 +8,7 @@ export interface ThemeState
 
 const state: ThemeState = 
 {
-    currentTheme: localStorage.getItem('theme') || 'light',
+    currentTheme: localStorage.getItem('theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : null) || 'light',
 };
 
 const mutations = 
