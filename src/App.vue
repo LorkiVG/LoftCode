@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { ref, watch, Ref, onMounted, onUnmounted } from 'vue';
+import { ref, computed, watch, Ref, onMounted, onUnmounted } from 'vue';
 import { useRoute, RouteLocationNormalizedLoaded } from 'vue-router';
+import { useStore } from 'vuex';
 import { PerfectScrollbar } from 'vue3-perfect-scrollbar';
 
 import { container } from "jenesius-vue-modal";
@@ -15,7 +16,15 @@ import Footer from './components/Footer.vue';
 import './scss/themes/light.scss';
 import './scss/themes/dark.scss';
 
-import { scrollHidden } from './ts/handlers/ScrollHandler';
+const store = useStore();
+
+const isScrollHidden = computed(() => 
+{
+    return store.getters['scroll/isScrollHidden'];
+});
+
+
+
 
 const route : RouteLocationNormalizedLoaded = useRoute();
 
@@ -58,11 +67,11 @@ watch(ThemeHandler.currentTheme, (newTheme) =>
     applyTheme(newTheme);
 });
 
-watch(scrollHidden, () => 
+watch(isScrollHidden, () => 
 {
     const body : HTMLBodyElement | null = document.querySelector('body');
     const ps : HTMLElement | null = document.querySelector('ps');
-    if(scrollHidden.value)
+    if(isScrollHidden.value)
     {
         body?.classList.add('scrollHidden');
         ps?.classList.add('scrollHidden');

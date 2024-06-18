@@ -2,7 +2,6 @@
     import { computed, onMounted, onUnmounted } from 'vue';
     import { useStore } from 'vuex';
     import { ThemeHandler } from '../ts/handlers/ThemeHandler';
-    import { scrollHidden } from '../ts/handlers/ScrollHandler';
     import { timeout } from '../ts/helpers/TimeOutHelper';
 
     const store = useStore();
@@ -17,21 +16,32 @@
         store.dispatch('preloader/togglePreloaded', !isPreloaded.value);
     };
 
+    const isScrollHidden = computed(() => 
+    {
+        return store.getters['scroll/isScrollHidden'];
+    });
+    const toggleScrollHidden = () => 
+    {
+        console.log(isScrollHidden.value);
+        
+        store.dispatch('scroll/toggleScrollHidden', !isScrollHidden.value);
+    };
+
     const onLoad = async () => 
     {
         await timeout(2000);
+        toggleScrollHidden();
         togglePreloaded();
     };
 
     onMounted(() => 
     {
-        scrollHidden.value = true;
+        toggleScrollHidden();
         window.addEventListener('load', onLoad);
     });
 
     onUnmounted(() => 
     {
-        scrollHidden.value = false;
         window.removeEventListener('load', onLoad);
     });
 </script>
