@@ -22,8 +22,6 @@
     });
     const toggleScrollHidden = () => 
     {
-        console.log(isScrollHidden.value);
-        
         store.dispatch('scroll/toggleScrollHidden', !isScrollHidden.value);
     };
 
