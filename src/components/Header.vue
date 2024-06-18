@@ -11,6 +11,7 @@
     {
         return store.getters['burgerMenu/isBurgerMenuActive'];
     });
+    
     const toggleBurgerMenuActive = () => 
     {
         store.dispatch('burgerMenu/toggleBurgerMenuActive', !isBurgerMenuActive.value);

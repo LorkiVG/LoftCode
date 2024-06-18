@@ -14,6 +14,7 @@ import Footer from './components/Footer.vue';
 
 import './scss/themes/light.scss';
 import './scss/themes/dark.scss';
+
 import { scrollHidden } from './ts/handlers/ScrollHandler';
 
 const route : RouteLocationNormalizedLoaded = useRoute();
