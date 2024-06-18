@@ -37,6 +37,7 @@ const getters =
 
 export const burgerMenu: Module<BurgerMenuState, RootState> = 
 {
+    namespaced: true, 
     state,
     mutations,
     actions,

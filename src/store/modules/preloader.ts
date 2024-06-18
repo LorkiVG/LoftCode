@@ -37,6 +37,7 @@ const getters =
 
 export const preloader: Module<PreloaderState, RootState> = 
 {
+    namespaced: true, 
     state,
     mutations,
     actions,

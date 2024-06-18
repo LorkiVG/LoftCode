@@ -1,13 +1,25 @@
 <script setup lang="ts">
-    import { burgerActive } from '../ts/handlers/BurgerHandler';
+    import { computed } from 'vue';
+    import { useStore } from 'vuex';
     import { ThemeHandler } from '../ts/handlers/ThemeHandler';
 
-    const emits = defineEmits(['toggleBurger']);
+    const store = useStore(); 
+
+    const emits = defineEmits(['toggleBurgerMenuActive']);
+
+    const isBurgerMenuActive = computed(() => 
+    {
+        return store.getters['burgerMenu/isBurgerMenuActive'];
+    });
+    const toggleBurgerMenuActive = () => 
+    {
+        store.dispatch('burgerMenu/toggleBurgerMenuActive', !isBurgerMenuActive.value);
+    };
 
     const onBurgerClick = () => 
     {
-        burgerActive.value = !burgerActive.value;
-        emits('toggleBurger');
+        toggleBurgerMenuActive();
+        emits('toggleBurgerMenuActive');
     }
 
     const onThemeSwitchClick = () => 
@@ -28,7 +40,7 @@
             <img v-if="ThemeHandler.currentTheme.value == 'dark'" src="/src/assets/img/components/Header/logo/light.svg" alt="LoftCode" class="header__content__logo">
             <img v-else-if="ThemeHandler.currentTheme.value == 'white'" src="/src/assets/img/components/Header/logo/dark.svg" alt="LoftCode" class="header__content__logo">
             <img v-else src="/src/assets/img/components/Header/logo/dark.svg" alt="LoftCode" class="header__content__logo">
-            <nav class="header__content__nav" :class="burgerActive ? 'active' : ''">
+            <nav class="header__content__nav" :class="isBurgerMenuActive ? 'active' : ''">
                 <nav class="header__content__nav__links">
                     <a href="#" class="header__content__nav__links__link">Services</a>
                     <a href="#" class="header__content__nav__links__link">Projects</a>
@@ -42,7 +54,7 @@
                 <button class="header__content__nav__button">Propose project</button>
             </nav>
             <button class="header__content__button">Propose project</button>
-            <div @click="onBurgerClick" class="header__content__burger" :class="burgerActive ? 'active' : ''">
+            <div @click="onBurgerClick" class="header__content__burger" :class="isBurgerMenuActive ? 'active' : ''">
                 <div class="header__content__burger__lines"></div>
             </div>
         </div>

@@ -1,28 +1,26 @@
 <script setup lang="ts">
-    import { onMounted, onUnmounted, computed } from 'vue';
+    import { computed, onMounted, onUnmounted } from 'vue';
+    import { useStore } from 'vuex';
     import { ThemeHandler } from '../ts/handlers/ThemeHandler';
     import { scrollHidden } from '../ts/handlers/ScrollHandler';
-    
-    import { totalResources, loadedResources, isPreloaded } from '../ts/handlers/PreloaderHandler';
     import { timeout } from '../ts/helpers/TimeOutHelper';
 
-    const progress = computed(() => 
+    const store = useStore();
+
+    const isPreloaded = computed(() => 
     {
-        if (totalResources.value === 0) return 0;
-        return (loadedResources.value / totalResources.value) * 100;
+        return store.getters['preloader/isPreloaded'];
     });
+    const togglePreloaded = () => 
+    {
+        
+        store.dispatch('preloader/togglePreloaded', !isPreloaded.value);
+    };
 
     const onLoad = async () => 
     {
-        if (totalResources.value > 0) 
-        {
-            
-            loadedResources.value = totalResources.value;
-            scrollHidden.value = false;
-
-            await timeout(2000);
-            isPreloaded.value = true;
-        }
+        await timeout(2000);
+        togglePreloaded();
     };
 
     onMounted(() => 
@@ -44,9 +42,7 @@
             <img v-if="ThemeHandler.currentTheme.value == 'dark'" v-animate data-animate-type="scale" data-animate-alwaysshow src="/src/assets/img/components/Header/logo/light.svg" alt="LoftCode" class="preloader__content__logo">
             <img v-else-if="ThemeHandler.currentTheme.value == 'white'" v-animate data-animate-type="scale" data-animate-alwaysshow src="/src/assets/img/components/Header/logo/dark.svg" alt="LoftCode" class="preloader__content__logo">
             <img v-else v-animate data-animate-alwaysshow src="/src/assets/img/components/Header/logo/dark.svg" data-animate-type="scale"  alt="LoftCode" class="preloader__content__logo">
-            <div v-animate data-animate-alwaysshow data-animate-type="scale" class="preloader__content__loader">
-                <span :style="{ width: progress + '%' }" class="preloader__content__loader__bar"></span>
-            </div>
+            <img v-animate data-animate-alwaysshow data-animate-type="scale" src="/src/assets/img/components/Preloader/loader.apng" alt="Loading..." class="preloader__loader">
         </div>
     </div>
 </template>

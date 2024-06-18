@@ -15,14 +15,6 @@ import Footer from './components/Footer.vue';
 import './scss/themes/light.scss';
 import './scss/themes/dark.scss';
 import { scrollHidden } from './ts/handlers/ScrollHandler';
-import { isPreloaded } from './ts/handlers/PreloaderHandler';
-
-const isBurgerActive : Ref<boolean> = ref(false);
-
-const toggleBurger = () => 
-{
-    isBurgerActive.value = !isBurgerActive.value;
-}
 
 const route : RouteLocationNormalizedLoaded = useRoute();
 
@@ -51,7 +43,6 @@ const applyTheme = (theme: string) =>
 
 onMounted(() => 
 {
-    isPreloaded.value = false;
     applyTheme(ThemeHandler.currentTheme.value);
     window.addEventListener('resize', onResize);
 });
@@ -65,8 +56,6 @@ watch(ThemeHandler.currentTheme, (newTheme) =>
 {
     applyTheme(newTheme);
 });
-
-
 
 watch(scrollHidden, () => 
 {
@@ -83,11 +72,12 @@ watch(scrollHidden, () =>
         ps?.classList.remove('scrollHidden');
     }
 });
+
 </script>
 
 <template>
     <div id="app">
-        <Header @toggleBurger="toggleBurger"/>
+        <Header/>
         <perfect-scrollbar v-if="windowWidth > 1050" ref="scroll">
             <router-view v-slot="{ Component }">
                 <transition name="pageOpacity" mode="out-in">

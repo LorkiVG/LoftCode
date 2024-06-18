@@ -37,6 +37,7 @@ const getters =
 
 export const scroll: Module<ScrollState, RootState> = 
 {
+    namespaced: true, 
     state,
     mutations,
     actions,
