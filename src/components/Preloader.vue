@@ -47,10 +47,10 @@
 <template>
     <div class="preloader" :class="isPreloaded ? 'hide' : ''">
         <div class="preloader__content">
-            <img v-if="ThemeHandler.currentTheme.value == 'dark'" v-animate data-animate-type="scale" data-animate-alwaysshow src="/src/assets/img/components/Header/logo/light.svg" alt="LoftCode" class="preloader__content__logo">
-            <img v-else-if="ThemeHandler.currentTheme.value == 'white'" v-animate data-animate-type="scale" data-animate-alwaysshow src="/src/assets/img/components/Header/logo/dark.svg" alt="LoftCode" class="preloader__content__logo">
-            <img v-else v-animate data-animate-alwaysshow src="/src/assets/img/components/Header/logo/dark.svg" data-animate-type="scale"  alt="LoftCode" class="preloader__content__logo">
-            <img v-animate data-animate-alwaysshow data-animate-type="scale" src="/src/assets/img/components/Preloader/loader.apng" alt="Loading..." class="preloader__loader">
+            <img v-if="ThemeHandler.currentTheme.value == 'dark'" v-animation data-animation-type="onStart" data-animation-name="scale" src="/src/assets/img/components/Header/logo/light.svg" alt="LoftCode" class="preloader__content__logo">
+            <img v-else-if="ThemeHandler.currentTheme.value == 'white'" v-animation data-animation-type="onStart" data-animation-name="scale" src="/src/assets/img/components/Header/logo/dark.svg" alt="LoftCode" class="preloader__content__logo">
+            <img v-else v-animation data-animation-type="onStart" data-animation-name="scale" src="/src/assets/img/components/Header/logo/dark.svg" alt="LoftCode" class="preloader__content__logo">
+            <img v-animation data-animation-type="onStart" data-animation-name="scale" src="/src/assets/img/components/Preloader/loader.apng" alt="Loading..." class="preloader__loader">
         </div>
     </div>
 </template>

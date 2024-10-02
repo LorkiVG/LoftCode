@@ -24,7 +24,7 @@
             </Carousel>
         </div>
         <div class="bgblock__content">
-            <h1 class="bgblock__content__title">Design Development Support</h1>
+            <h1 v-animation data-animation-type="onStart" data-animation-name="scale" class="bgblock__content__title">Design Development Support</h1>
         </div>
     </div>
 </template>

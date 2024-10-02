@@ -23,9 +23,6 @@ const isScrollHidden = computed(() =>
     return store.getters['scroll/isScrollHidden'];
 });
 
-
-
-
 const route : RouteLocationNormalizedLoaded = useRoute();
 
 const scroll : Ref<HTMLElement | null> = ref(null);
@@ -82,11 +79,11 @@ watch(isScrollHidden, () =>
         ps?.classList.remove('scrollHidden');
     }
 });
-
 </script>
 
 <template>
     <div id="app">
+        <Preloader/>
         <Header/>
         <perfect-scrollbar v-if="windowWidth > 1050" ref="scroll">
             <router-view v-slot="{ Component }">
@@ -102,6 +99,6 @@ watch(isScrollHidden, () =>
         </router-view>
         <container />
         <Footer/>
-        <Preloader/>
     </div>
+    
 </template>

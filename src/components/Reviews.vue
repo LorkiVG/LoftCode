@@ -37,12 +37,12 @@
 
 <template>
     <div class="reviews">
-        <p class="reviews__title">Reviews</p>
-        <p class="reviews__text">What our clients are saying about us.</p>
+        <p v-animation data-animation-type="onScroll" data-animation-name="slideX" class="reviews__title">Reviews</p>
+        <p v-animation data-animation-type="onScroll" data-animation-name="slideX" class="reviews__text">What our clients are saying about us.</p>
         <div class="reviews__content">
             <Carousel v-if="windowWidth > 1400" ref="reviewsSlider" :wrapAround="true" snapAlign="start" :items-to-show="2.5">
                 <Slide v-for="(answer, index) in reviews" :key="index">
-                    <div class="reviews__content__answer">
+                    <div v-animation data-animation-type="onScroll" data-animation-name="scale" :data-animation-timeout="200*index" class="reviews__content__answer">
                         <div class="reviews__content__answer__stars">
                             <img v-for="indexStar in answer.stars" :key="indexStar" src="/src/assets/img/components/Reviews/star.png" class="reviews__content__answer__stars__star">
                         </div>
@@ -54,7 +54,7 @@
             </Carousel>
             <Carousel v-else-if="windowWidth > 1050" ref="reviewsSlider" :wrapAround="true" snapAlign="start" :items-to-show="2">
                 <Slide v-for="(answer, index) in reviews" :key="index">
-                    <div class="reviews__content__answer">
+                    <div v-animation data-animation-type="onScroll" data-animation-name="scale" :data-animation-timeout="200*index" class="reviews__content__answer">
                         <div class="reviews__content__answer__stars">
                             <img v-for="indexStar in answer.stars" :key="indexStar" src="/src/assets/img/components/Reviews/star.png" class="reviews__content__answer__stars__star">
                         </div>
@@ -66,7 +66,7 @@
             </Carousel>
             <Carousel v-else-if="windowWidth > 900" ref="reviewsSlider" :wrapAround="true" snapAlign="start" :items-to-show="1.5">
                 <Slide v-for="(answer, index) in reviews" :key="index">
-                    <div class="reviews__content__answer">
+                    <div v-animation data-animation-type="onScroll" data-animation-name="scale" :data-animation-timeout="200*index" class="reviews__content__answer">
                         <div class="reviews__content__answer__stars">
                             <img v-for="indexStar in answer.stars" :key="indexStar" src="/src/assets/img/components/Reviews/star.png" class="reviews__content__answer__stars__star">
                         </div>
@@ -78,7 +78,7 @@
             </Carousel>
             <Carousel v-else ref="reviewsSlider" :wrapAround="true" snapAlign="start" :items-to-show="1">
                 <Slide v-for="(answer, index) in reviews" :key="index">
-                    <div class="reviews__content__answer">
+                    <div v-animation data-animation-type="onScroll" data-animation-name="scale" :data-animation-timeout="200*index" class="reviews__content__answer">
                         <div class="reviews__content__answer__stars">
                             <img v-for="indexStar in answer.stars" :key="indexStar" src="/src/assets/img/components/Reviews/star.png" class="reviews__content__answer__stars__star">
                         </div>
